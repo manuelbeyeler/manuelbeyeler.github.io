@@ -134,7 +134,7 @@ figcaption { margin-top: 10px; color: var(--mute); }
   gap: 16px;
 }
 .now, .skill-row { grid-template-columns: 1fr 1fr; }
-.now article, .machines article, .skill-row > div, .add-card {
+.now article, .machines article, .skill-row > div {
   background: var(--card);
   border: 1px solid var(--line);
   padding: 20px;
@@ -157,26 +157,15 @@ figcaption { margin-top: 10px; color: var(--mute); }
 
 .filters { display: flex; gap: 8px; margin-bottom: 18px; }
 .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.card, .add-card {
+.card {
   padding: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   text-align: left;
-}
-.card {
   background: transparent;
   border: 0;
 }
-.add-card {
-  border-style: dashed;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--mute);
-  gap: 6px;
-}
-.add-card strong { color: var(--ink); font-weight: 550; }
 .media {
   aspect-ratio: 4 / 3;
   width: 50%;
@@ -228,16 +217,6 @@ figcaption { margin-top: 10px; color: var(--mute); }
   line-height: 1.45;
 }
 .tag { color: var(--accent); margin: 0 0 6px; }
-.remove {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border: 0;
-  background: transparent;
-  color: var(--mute);
-  cursor: pointer;
-  font-size: 12px;
-}
 
 .machines { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .machines p { margin: 0; color: var(--mute); }
@@ -274,13 +253,13 @@ figcaption { margin-top: 10px; color: var(--mute); }
   gap: 12px;
   max-width: 480px;
 }
-.mail label, .sheet label {
+.mail label {
   display: grid;
   gap: 6px;
   font-size: 13px;
   color: var(--mute);
 }
-.mail input, .mail textarea, .sheet input, .sheet textarea, .sheet select {
+.mail input, .mail textarea {
   border: 1px solid var(--line);
   background: var(--card);
   padding: 10px 12px;
@@ -297,34 +276,16 @@ footer {
   color: var(--mute);
   border-top: 1px solid var(--line);
 }
-.text-btn {
-  border: 0;
-  background: none;
-  color: var(--mute);
-  cursor: pointer;
-  padding: 0;
-  font: inherit;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
 
-.sheet, .lightbox { border: 0; padding: 0; background: transparent; }
-.sheet::backdrop, .lightbox::backdrop { background: rgba(18, 21, 26, 0.5); }
-.sheet form {
-  width: min(460px, calc(100vw - 32px));
-  background: var(--card);
-  padding: 24px;
-  border-radius: 16px;
-  display: grid;
-  gap: 12px;
-}
 .lightbox {
+  border: 0;
   width: min(780px, calc(100vw - 24px));
   background: #111;
   color: #f6f1ea;
   padding: 16px;
   text-align: left;
 }
+.lightbox::backdrop { background: rgba(18, 21, 26, 0.5); }
 .lightbox .close { color: #f6f1ea; border-color: #555; background: transparent; margin-bottom: 12px; }
 #viewer-body {
   display: flex;
@@ -360,8 +321,6 @@ footer {
   cursor: pointer;
 }
 .gallery-nav span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; }
-
-body.is-editing .nav { box-shadow: inset 0 -2px 0 var(--accent); }
 
 @media (max-width: 860px) {
   .hero, .now, .skill-row, .grid, .machines, .cv article { grid-template-columns: 1fr; }

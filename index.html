@@ -309,31 +309,7 @@
 
   <footer>
     <p>Manuel Beyeler · Drucktechnologe EFZ · Betriebsfachmann EFA</p>
-    <button type="button" class="text-btn" id="edit-toggle">Highlights bearbeiten</button>
   </footer>
-
-  <dialog id="composer" class="sheet">
-    <form method="dialog" id="post-form">
-      <p class="eyebrow">Neuer Beitrag</p>
-      <h3>Highlight hinzufügen</h3>
-      <p class="hint">Titel, Fähigkeit, kurzer Text. Bild oder Video. Kein Datum.</p>
-      <label>Titel<input name="title" required maxlength="80" placeholder="z. B. Registerkontrolle XL 105" /></label>
-      <label>Fähigkeit<input name="skill" required maxlength="40" placeholder="z. B. Qualität" /></label>
-      <label>Kurz erklärt<textarea name="text" required maxlength="240" rows="3" placeholder="Was sieht man - und welche Stärke wird sichtbar?"></textarea></label>
-      <label>Medium
-        <select name="kind">
-          <option value="bild">Bild</option>
-          <option value="video">Video</option>
-        </select>
-      </label>
-      <label>Datei<input name="file" type="file" accept="image/*,video/*" /></label>
-      <p class="fine" id="file-note">Bilder bis etwa 1,5&nbsp;MB bleiben auf diesem Computer gespeichert.</p>
-      <div class="actions">
-        <button type="submit" class="btn">Veröffentlichen</button>
-        <button type="button" class="btn btn-line" id="cancel-post">Abbrechen</button>
-      </div>
-    </form>
-  </dialog>
 
   <dialog id="viewer" class="lightbox">
     <button type="button" class="close" id="close-viewer">Schliessen</button>
