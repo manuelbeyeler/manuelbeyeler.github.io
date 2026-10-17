@@ -133,13 +133,24 @@ figcaption { margin-top: 10px; color: var(--mute); }
   display: grid;
   gap: 16px;
 }
-.now, .skill-row { grid-template-columns: 1fr 1fr; }
+.now { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.skill-row { grid-template-columns: 1fr 1fr; }
 .now article, .machines article, .skill-row > div {
   background: var(--card);
   border: 1px solid var(--line);
   padding: 20px;
 }
 .now ul { margin: 10px 0 0; padding-left: 18px; }
+.now .doc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  margin: 14px 0 0;
+}
+.now .doc-links a {
+  font-weight: 550;
+  text-underline-offset: 3px;
+}
 .chips {
   list-style: none;
   display: flex;
@@ -322,6 +333,9 @@ footer {
 }
 .gallery-nav span { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; }
 
+@media (max-width: 1100px) {
+  .now { grid-template-columns: 1fr; }
+}
 @media (max-width: 860px) {
   .hero, .now, .skill-row, .grid, .machines, .cv article { grid-template-columns: 1fr; }
   .nav nav { display: none; }
